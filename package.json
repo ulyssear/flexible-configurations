@@ -1,0 +1,27 @@
+{
+  "name": "flexible-configurations",
+  "author": "ulyssear <ulysse.arnaud@liigem.io>",
+  "version": "0.0.1",
+  "description": "Configuration rapide et facile à mettre en place",
+  "module": "./build/index.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulyssear/flexible-configurations.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ulyssear/flexible-configurations/issues"
+  },
+  "homepage": "https://github.com/ulyssear/flexible-configurations#readme",
+  "scripts": {
+    "build": "npm run build-cjs && npm run build-umd",
+    "build-umd": "rollup src/index.js --format umd --name \"just-render\" --file build/index.esm.js",
+    "build-cjs": "rollup src/index.js --format cjs --file build/index.common.js"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^2.55.1"
+  }
+}
